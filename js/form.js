@@ -46,7 +46,7 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     let pacienteTr = montaTr(paciente);
 
-    let tabela = document.querySelector("#tabela-pacientes");
+    let tabela = document.querySelector("#tabela-pacientesRemocao");
 
     tabela.appendChild(pacienteTr);
 
