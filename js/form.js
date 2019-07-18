@@ -44,11 +44,7 @@ botaoAdicionar.addEventListener("click", function(event) {
         return;
     }
 
-    let pacienteTr = montaTr(paciente);
-
-    let tabela = document.querySelector("#tabela-pacientesRemocao");
-
-    tabela.appendChild(pacienteTr);
+    adicionaPacienteNaTabela(paciente)
 
     form.reset();
 
@@ -96,4 +92,10 @@ function exibeMensagensDeErro(erros) {
         li.textContent = erro;
         ul.appendChild(li);
     });
+}
+
+function adicionaPacienteNaTabela(paciente) {
+    let pacienteTr = montaTr(paciente);
+    let tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
 }
